@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Restaurante</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header id="encabezado" hidden>
+    <h1>🍔 Mi Restaurante</h1>
+    <div class="usuario">
+      <span id="usuario"></span>
+      <button id="btnSalir" class="secundario">Salir</button>
+    </div>
+  </header>
+
+  <div id="mensaje" role="status" hidden></div>
+
+  <main>
+    <!-- Pantalla de inicio de sesión -->
+    <section id="vistaLogin" class="tarjeta angosta">
+      <h1>🍔 Mi Restaurante</h1>
+      <p class="ayuda">Escribe tu nombre y tu contraseña para entrar.</p>
+      <form id="formLogin">
+        <label>Nombre
+          <input id="loginNombre" autocomplete="username" required>
+        </label>
+        <label>Contraseña
+          <input id="loginClave" type="password" autocomplete="current-password" required>
+        </label>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <!-- Pantalla principal -->
+    <section id="vistaApp" hidden>
+      <nav id="menu"></nav>
+      <div id="contenido"></div>
+    </section>
+  </main>
+
+  <dialog id="dialogoComprobante" class="comprobante">
+    <h2 id="tituloComprobante"></h2>
+    <div id="contenidoComprobante"></div>
+    <div class="botones">
+      <button type="button" class="secundario" onclick="document.getElementById('dialogoComprobante').close()">Cerrar</button>
+    </div>
+  </dialog>
+
+  <!-- Ventanita para pedir un número (dinero recibido, etc.) -->
+  <dialog id="dialogo">
+    <form method="dialog">
+      <p id="dlgTexto"></p>
+      <input id="dlgInput" type="number" min="0" step="any" required>
+      <div class="botones">
+        <button value="cancel" class="secundario" formnovalidate>Cancelar</button>
+        <button value="ok">Aceptar</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

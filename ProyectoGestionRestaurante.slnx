@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Aplicaciones/Aplicaciones.csproj" />
+  <Project Path="Infraestructura/Infraestructura.csproj" />
+  <Project Path="Modelos/Modelos.csproj" />
+  <Project Path="ProyectoGestionRestaurante/ProyectoGestionRestaurante.csproj" />
+</Solution>
